@@ -16,8 +16,8 @@ export default {
   data() {
     return {
       tasks: [
-        {name: 'lavar louça', pending: false},
-        {name: 'Comprar Sapato', pending: true}
+        { name: 'lavar louça', pending: false },
+        { name: 'Comprar Sapato', pending: true }
       ]
     }
   }
@@ -42,6 +42,7 @@ body {
   background-image: linear-gradient(to right, #0d1226,
       #3d2e22);
   overflow-x: hidden;
-  color: #bf7329;
+  color:
+    #ff4e20;
 }
 </style>

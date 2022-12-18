@@ -1,9 +1,10 @@
 <template>
-    <div class="task-grid">
+    <div class="taskGrid" v-if="tasks.length">
         <template>
             <Task v-for="task in tasks" :key="task.name" :task="task" />
         </template>
     </div>
+    <p v-else class="no-task"> Sem Tarefas </p>
 </template>
 
 <script>
@@ -23,6 +24,20 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.taskGrid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.taskGrid .task {
+    margin: 10px;
+}
+
+.no-task {
+    color: #AAA;
+    font-size: 1.7rem;
+}
 
 </style>
