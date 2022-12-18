@@ -1,15 +1,17 @@
 <template>
   <div id="app">
-    <h1>Teste</h1>
+    <h1>Tasks</h1>
+    <TaskGrid :tasks="tasks" />
   </div>
 </template>
 
 <script>
+import TaskGrid from "./components/TaskGrid"
 
 export default {
   name: 'App',
   components: {
-
+    TaskGrid,
   },
   data() {
     return {
