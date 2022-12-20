@@ -1,10 +1,10 @@
 <template>
     <div class="taskGrid" v-if="tasks.length">
         <template>
-            <Task @taskDeleted="$emit('taskDeleted', i)" v-for="(task, i) in tasks" :key="task.name" :task="task" />
+            <Task @taskStateChanged="$emit('taskStateChanged', i)" @taskDeleted="$emit('taskDeleted', i)" v-for="(task, i) in tasks" :key="task.name" :task="task" />
         </template>
     </div>
-    <p v-else class="no-task"> Sem Tarefas </p>
+    <p v-else class="no-task"> No Tasks </p>
 </template>
 
 <script>
